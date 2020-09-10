@@ -1,0 +1,23 @@
+{% extends "encyclopedia/layout.html" %}
+{% load markdownify %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block head %}
+<style type="text/css">
+	li{
+		color: white;
+	}
+</style>
+
+{% endblock %}
+
+{% block body %}
+
+     {{ body | markdownify }}
+
+     <a href="{% url 'edit_page' title %}"> Edit Entry </a>
+
+{% endblock %}

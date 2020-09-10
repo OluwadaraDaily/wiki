@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %}
+{% load markdownify %}
+
+{% block title %}
+    Error
+{% endblock %}
+
+{% block body %}
+
+     <h1> Error </h1> <hr>
+     <p> {{ message }} </p>
+
+     <a href="{% url 'index' %}"> Go back home </a>
+
+{% endblock %}

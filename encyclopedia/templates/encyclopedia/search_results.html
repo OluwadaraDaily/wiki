@@ -1,0 +1,21 @@
+{% extends "encyclopedia/layout.html" %}
+{% load markdownify %}
+
+{% block title %}
+    Search Result(s)
+{% endblock %}
+
+{% block body %}
+	<h1> Search Results </h1> <hr>
+	{% if output|length == 0 %}
+		<p> No Matches Found </p>
+		<a href="{% url 'index' %}"> Return Home </a>
+	{% else %}
+		<ul>
+			{% for entry in output %}
+				<li><a href="{% url 'entry_page' entry %}"> {{ entry }} </a></li>
+			{% endfor %}	
+		</ul>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    background-color: white;
+}
+
+code {
+    white-space: pre;
+}
+
+h1 {
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
+textarea {
+    height: 90vh;
+    width: 80%;
+}
+
+.main {
+    padding: 10px;
+}
+
+.search {
+    width: 100%;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.sidebar {
+    background-color: #06453b;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+}
+
+.sidebar div {
+    width: 100%;
+    padding: 10px 0;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.sidebar div a {
+    color: white;
+}
+
+#search-btn {
+    padding: 5px;
+    letter-spacing: 2px;
+    border-radius: 7px; 
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px 0 10px 20px;
+    background-color: #06453b;
+    border-bottom: 3px solid white;
+}
+ul li a, ul li a:hover {
+    color: white;
+}
+
+ul li a i {
+    float: right
+}

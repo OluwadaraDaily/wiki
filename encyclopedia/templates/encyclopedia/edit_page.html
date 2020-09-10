@@ -1,0 +1,29 @@
+{% extends "encyclopedia/layout.html" %}
+{% load markdownify %}
+
+{% block title %}
+    Edit Page
+{% endblock %}
+
+{% block head %}
+	<style type="text/css">
+    	small {
+    		color: #eb4034;
+    	}
+    </style>
+{% endblock %}
+
+{% block body %}
+	
+    <div class="form-group col-lg-8 col-md-6">
+    	<form method="POST" action="{% url 'edit_page' title %}">
+    		{% csrf_token %}
+    		<label> Page Title </label>
+    		<input type="text" name="page-title" class="form-control" value="{{ title }}">
+    		<label> Page Content </label> <small>(Write in MarkDown)</small>
+    		<textarea class="form-control" name="page-content" rows="8">{{ content }}</textarea> <hr>
+    		<input type="submit" value="Update" class="btn btn-primary">
+    	</form>
+    </div>
+
+{% endblock %}
